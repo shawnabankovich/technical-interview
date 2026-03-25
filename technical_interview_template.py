@@ -9,11 +9,10 @@ Original file is located at
 
 import requests, zipfile, io
 
-url = "https://github.com/shawnabankovich/technical-interview/releases/download/data/casino_resort_dataset.zip"
+url = "https://github.com/shawnabankovich/technical-interview/releases/download/v1.1/casino_resort_dataset_v2.zip"
 
 r = requests.get(url)
 r.raise_for_status()
 
 z = zipfile.ZipFile(io.BytesIO(r.content))
 z.extractall("data/")
-
